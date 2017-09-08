@@ -32,4 +32,3 @@ Watch Live Demo of <a href="https://materialtube.firebaseapp.com/">MatTube onlin
 3. npm install : command to install required modules
 4. npm serve : command to create the server
 5. Open localhost:4200
->>>>>>> 6edc26fa843ba558cf708dc832e78a865b8d8858
