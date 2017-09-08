@@ -1,0 +1,42 @@
+<div class="card raleway" id="container">
+
+  <loading *ngIf="loading"></loading>
+
+  <h4 *ngIf="!loading && channel?.featuredChannelsTitle== null">
+      <strong>Featured Channels</strong>
+  </h4>
+
+  <p *ngIf="!featured && !loading">No Featured Channels</p>
+
+  <div *ngIf="featured && !loading" class="raleway">
+    
+    <h4 *ngIf="!loading && channel?.featuredChannelsTitle!= ''"><strong>{{ channel?.featuredChannelsTitle }}</strong></h4>
+
+    <ul *ngFor="let feature of channel.featuredChannels">
+
+      <div class="card featured animate-bottom">
+        <div class="thumbnail">
+          <div class="view hm-zoom user">
+            <a [routerLink]="['/channel', feature.id]">
+              <img src="{{feature.thumbnailUrl}}" class="img-fluid z-depth-3" alt="User Thumbnail">
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div style="flex:1">
+            <a [routerLink]="['/channel', feature.id]">
+              <h6>{{ feature.title }}</h6>
+            </a>
+          </div>
+          <div class="subs">
+            <button class="btn">Subscribers</button>
+            <span class="subscribers">{{ feature.subscribers | converter }}</span>
+          </div>
+        </div>
+      </div>
+
+    </ul>
+
+  </div>
+
+</div>

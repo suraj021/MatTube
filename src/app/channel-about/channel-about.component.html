@@ -1,0 +1,22 @@
+<div *ngIf="loading" id="loading">
+    <loading></loading>
+</div>
+
+<div *ngIf="!loading" class="card">
+
+  <div class="card-body raleway animate-bottom">
+    <h4><strong>{{ channel?.title }}</strong></h4>
+    <button class="btn" (click)="toggle()">Subscribers</button>
+    <span *ngIf="showSubscribers" class="subscribers">{{ channel?.subscribers | converter }}</span>
+    <br/>
+    <p>{{ channel?.description }}</p>
+  </div>
+
+  <div class="featured card-body raleway animate-bottom">
+    <span class="block"><strong>Published on&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ channel?.publishedAt | date }}</span>
+    <span class="block"><strong>View Count&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ channel?.viewCount | number }}</span>
+    <span class="block"><strong>Videos Count&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ channel?.videosCount }}</span>
+    <span class="block"><strong>Country&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{channel?.country}}</span>
+  </div>
+
+</div>

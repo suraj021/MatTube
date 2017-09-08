@@ -1,0 +1,107 @@
+.card-body h4 {
+    color: #FF0000;
+    display: inline;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    //background-color: #f8f8f8;
+}
+
+.featured {
+    border-left: 0.5px solid silver;
+    padding-top: 15%;
+}
+
+span.block {
+    display: block;
+}
+
+.btn{
+    background-color: #FF0000;
+    border-radius: 10px;
+    padding: 5px; 
+}
+
+.subscribers{
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+@media screen and ( max-width: 1065px ){
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .featured {
+        //border-top: 0.5px solid silver;
+        border-left: none;
+        padding-top: 5%;
+    }
+
+    p{
+        font-size: 16px;
+    }
+}
+
+@media screen and ( max-width: 768px ){
+    h4{
+        font-size: 21px;
+    }
+    p, .featured{
+        font-size: 15px;
+    }
+
+    .btn{
+        font-size: 14px;
+    }
+}
+
+@media screen and ( max-width: 600px ){
+    h4{
+        font-size: 20px;
+    }
+    p, .featured{
+        font-size: 15px;
+    }
+
+    .btn{
+        font-size: 13px;
+    }
+}
+
+@media screen and ( max-width: 426px ){
+    h4{
+        font-size: 18px;
+    }
+    p, .featured{
+        font-size: 14px;
+    }
+    .btn{
+        font-size: 12px;
+    }
+    .subscribers{
+        font-size: 14px;
+    }
+}

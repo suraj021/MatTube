@@ -1,0 +1,102 @@
+.recommended {
+    //border: 1px solid red;
+    display: grid;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.recommended span{
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+ul.list-unstyled{
+    display: grid;
+    grid-gap: 0.5em;
+}
+
+.media{
+    margin-bottom: 10px;
+    //border: 1px solid blue;
+    border-radius: 2px;
+    width: 90%;
+    margin-left: 7%;
+    min-height: 50px;
+    background-color: #f7f7f7;
+}
+
+.title{
+    font-weight: bolder;
+}
+
+.media-body {
+    margin-left: 5px;
+}
+
+.media-body span{
+    font-size: 12px;
+}
+
+.channel-title{
+    display: block;
+    margin-bottom: 0;
+    margin-top: 5%;
+    padding-bottom: 0;
+}
+
+.views{
+    margin-top: 0px;
+    margin-right: 5px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+h6{
+    font-size: 12px;
+}
+
+.link{
+    color: #FF0000;
+}
+
+.view .mask p{
+    background-color:#000; 
+    display:inline;
+    border-radius: 2px;
+    font-size: 10px;
+    padding: 2px;
+    position: absolute;
+    right: 3px;
+    bottom: 0;
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+@media all and ( max-width: 426px ){
+    h5.title{
+        font-size: 14px;
+    }
+
+    h6.channel-title{
+        font-size: 12px;
+    }
+}

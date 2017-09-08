@@ -1,0 +1,52 @@
+.btn{
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #FF0000;
+    margin-top: -10px;
+    margin-left: 0;
+    text-align: center;
+    padding-left: -15px;
+}
+
+.btn:hover,.btn.disabled, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
+    color: #fff;
+    background-color: #FF0000 !important;
+    border-color: #FF0000 !important; /*set the color you want here*/
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+@media all and ( max-width: 426px ){
+    buuton.btn{
+        font-size: 13px;
+    }
+    div.description{
+        font-size: 13px;
+    }
+}
+
+@media all and ( max-width: 768px ){
+    buuton.btn{
+        font-size: 14px;
+    }
+    div.description{
+        font-size: 14px;
+    }
+}

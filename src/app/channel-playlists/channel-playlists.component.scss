@@ -1,0 +1,165 @@
+.card h4 {
+    color: #FF0000;
+    margin: 2%;;
+}
+
+.card .card-body ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.lists {
+    margin: 0;
+    padding: 0;
+    width: 27%;
+    margin-bottom: 4%;
+}
+
+img{
+    border-radius: 10px;
+}
+
+.lists .card-body {
+    display: flex;
+    flex-direction: column;
+   // margin-bottom: -17px;
+    margin-top: -5px;
+}
+
+.lists .card-body .title{
+    //border: 1px solid black;
+    flex: 1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #141516;
+}
+  
+.container:hover .overlay {
+    opacity: 0.7;
+    z-index: 2;
+}
+  
+.text {
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.mask {
+    width: 100%;
+    display: flex;
+}
+
+.mask > div{
+    //border: 1px solid red;
+}
+
+.left{
+    flex: 60%;
+}
+
+.right {
+    flex: 40%;
+    background: #0F1112 ;
+    opacity: 0.7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    padding-top: 20%;
+    color: #fff;
+    font-weight: bold;
+}
+
+.card-body .title a h6{
+    padding-bottom: 5px;
+}
+
+@media screen and ( max-width: 855px ){
+    .lists{
+        width: 35%;
+    }
+}
+
+@media screen and ( max-width: 770px ){
+    .lists{
+        width: 40%;
+    }
+}
+
+@media screen and ( max-width: 600px ){
+    .lists{
+        width: 51%;
+    }
+}
+
+@media screen and ( max-width: 500px ){
+    .lists{
+        width: 60%;
+    }
+}
+
+@media screen and ( max-width: 400px ){
+
+    .lists .card-body {
+        margin-bottom: -17px;
+        margin-top: -5px;
+    }    
+
+    .lists{
+        width: 80% !important;
+        margin-bottom: 15px;
+    }
+
+    .text{
+        font-size: 12px;
+        font-weight: bolder;
+    }
+
+    .mask .right{
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    h6{
+        font-size: 14px;
+    }
+}
+
+@media screen and ( max-width: 300px ){
+    .lists{
+        width: 80%;
+    }
+}
+
+@media screen and ( max-width: 248px ){
+    .lists{
+        width: 90%;
+    }
+}

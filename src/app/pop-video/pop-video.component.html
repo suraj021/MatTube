@@ -1,0 +1,33 @@
+<div class="card z-depth-3">
+
+    <!--Card image-->
+    <div>
+        <div class="view hm-zoom thumbnail">
+            <img src="{{ video?.thumbnail_url }}" class="img-fluid " alt="Video Thumnail">
+            <a [routerLink]="['/watch']" [queryParams]="{v: video?.id }">
+                <div class="mask">
+                    <p class="white-text raleway">{{ video?.duration | duration }}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Card content-->
+    <div class="title raleway">
+        <a [routerLink]="['/watch']" [queryParams]="{v: video?.id }">
+            <h4 class="card-title">{{ video?.title | summary:70 }}</h4>
+        </a>
+        <p style="font-size:12px; color:#000;">{{ video?.description | summary:88 }}</p>
+    </div>
+
+    <div class="stats raleway">
+        <a [routerLink]="[ '/channel', video?.channelId ]">
+            <span>{{ video?.channelTitle }}</span>
+        </a>
+        <span style="display: block;">
+            <i class="fa fa-eye" aria-hidden="true"></i>{{ video?.views | converter }}
+            <span>&nbsp;views &nbsp;<strong>|</strong>&nbsp;  <span>{{ video?.publishedAt | dateConverter }}</span></span>
+        </span>
+    </div>
+
+</div>

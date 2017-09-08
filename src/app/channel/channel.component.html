@@ -1,0 +1,21 @@
+<loading *ngIf="loading"></loading>
+
+<app-not-found *ngIf="error && !loading" [message]="message"></app-not-found>
+
+<div *ngIf="!error && !loading" class="wrapper">
+
+  <div class="main">
+
+    <div class="cover">
+      <channel-cover></channel-cover>
+    </div>
+
+    <div class="data">
+      <channel-data></channel-data>
+    </div>
+
+  </div>
+
+</div>
+
+<app-footer *ngIf="!error"></app-footer>

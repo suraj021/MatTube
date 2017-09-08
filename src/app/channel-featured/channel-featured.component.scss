@@ -1,0 +1,170 @@
+#container {
+    //border: 1px solid black;
+    height: auto;
+}
+
+#container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card {
+    //border: 1px solid black;
+}
+
+.card h4 {
+    font-family: raleway;
+    color: #FF0000;
+    margin: 10px;
+}
+
+.card .card-body h4 {
+    color: #FF0000;
+    margin-bottom: 10%;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.featured {
+    width: 30%;
+    margin-bottom: 11%;
+    margin-top: 15%;
+    align-items: center;
+}
+
+.featured .card-body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user {
+    border-radius: 30%;
+    border: 1px solid silver;
+    width: 40%;
+    margin: auto;
+    margin-top: -20%;
+    z-index: 1;
+}
+
+.btn{
+    background-color: #FF0000;
+    border-radius: 10px;
+    padding: 5px; 
+}
+
+.subscribers{
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+@media screen and ( max-width: 365px ){
+
+    h4{
+        margin-bottom: 10%;
+    }
+    
+    h6{
+        font-size: 13px;
+    }
+
+    .featured{
+        width: 51% !important;
+    }
+
+    .subscribers{
+        padding-bottom: -10px;
+        border-radius: 5px;
+    }
+
+    .card-body .subs{
+        font-size: 10px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .user{
+        width: 70%;
+    }
+}
+
+@media all and ( max-width: 426px ){
+    .featured{
+        width: 50%;
+        //margin-top: 15%;
+    }
+
+    h4{
+        font-size: 14px;
+    }
+
+    h6{
+        font-size: 13px;
+    }
+
+    .user {
+        width: 60%;
+    }
+
+    .card-body{
+        font-size: 12px;
+    }
+
+    .subs{
+        display: flex;
+    }
+
+    .btn, .subscribers{
+        font-size: 12px;
+    }
+}
+
+@media all and ( max-width: 768px ){
+    .featured{
+        width: 40%;
+        //margin-top: 15%;
+    }
+
+    h4{
+        font-size: 14px;
+    }
+
+    .user {
+        width: 50%;
+    }
+
+    .card-body{
+        font-size: 12px;
+    }
+
+    .subs{
+        display: flex;
+    }
+
+    .btn, .subscribers{
+        font-size: 12px;
+    }
+}

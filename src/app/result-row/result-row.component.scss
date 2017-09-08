@@ -1,0 +1,135 @@
+.card .thumbnail img{
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid silver;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text{
+    flex-grow: 1;
+}
+
+
+.details{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    color: #FF0000;
+}
+
+.details div {
+    ///border: 1px solid black;
+}
+
+i span{
+    margin-left: 5px;
+}
+
+.stats {
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.like{
+    text-align: end;
+    ///border: 1px solid black;
+}
+
+span.duration {
+    //color: #040404;
+}
+
+.dislike{
+    text-align: end;
+    //border: 1px solid black;
+}
+
+.show{
+    order: 1;
+    justify-content: flex-start;
+    margin-left: -5px;
+    //border: 1px solid black;
+}
+
+.view .mask p{
+    background-color:#000; 
+    display:inline;
+    border-radius: 4px;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+}
+
+@media screen and (max-width: 550px) {
+    
+    .details {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    
+    .card{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: 60%;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    
+    div.details {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: flex-start;
+    }
+
+    .stats{
+        //align-self: start;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+@media all and ( max-width: 425px ){
+    h4.title {
+        font-size: 15px;
+    }
+
+    span.channel-title{
+        font-size: 13px;
+        margin-top: -25px !important;
+    }
+
+    p.card-text{
+        font-size: 12px;
+    }
+
+    .details{
+        font-size: 12px;
+    }
+
+    .stats{
+        margin-left: -5px;
+    }
+}

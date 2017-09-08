@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="search-container">
+    <div class="md-form">
+        <i class="fa fa-search prefix"></i>
+        <input 
+          #input
+          (keyup)="onKeyUp(input)"
+          (keyup.enter)="onKeyUp(input)"
+          type="text" 
+          id="form2" 
+          class="form-control raleway" 
+          placeholder="Search"
+          style="margin-right:7px; font-size:20px; color:#CD201F">
+    </div>
+    <br/>
+  </div>
+
+  <div *ngIf="loading" id="loader">
+    <loading id="loading"></loading>
+  </div>
+  
+  <div class="result-container animate-bottom" *ngIf="videos.length > 0 && !loading">
+      <div class="result" *ngFor="let video of videos">
+          <result-row [video]="video"></result-row>
+      </div>
+  </div>
+  
+  
+</div>
+
+<app-footer *ngIf="videos.length > 0 && !loading"></app-footer>

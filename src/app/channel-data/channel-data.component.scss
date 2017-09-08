@@ -1,0 +1,47 @@
+.view {
+    //background-color: #CD201F;
+    margin-bottom: 10px;
+}
+
+.view .nav li {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    //border: 1px solid black;
+}
+
+.active{
+    border-bottom: 5px solid #FF0000 ;
+    font-weight: 900;
+}
+
+@media screen and ( max-width: 488px ){
+    .view ul{
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    ul a{
+        flex-basis: 35%;
+    }
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+

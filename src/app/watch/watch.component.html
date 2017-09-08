@@ -1,0 +1,33 @@
+<app-not-found *ngIf="error" [message]="message"></app-not-found>
+
+<div  *ngIf="!error" class="flex-grid">
+
+  <app-spinner ></app-spinner>
+
+  <div class="main">
+    
+    <div class="embed">
+      <embed-video></embed-video>
+    </div>
+
+    <div class="title z-depth-1">
+      <video-title></video-title>
+    </div>
+
+    <div class="description">
+      <video-description></video-description>
+    </div>
+
+    <div class="comments">
+      <comments></comments>
+    </div>
+
+  </div>
+
+  <div class="recommended">
+    <recommended-video></recommended-video>
+  </div>
+
+</div>
+
+<app-footer *ngIf="!error"></app-footer>

@@ -1,0 +1,51 @@
+<div class="card raleway" id="container">
+
+    <h4><strong>Created Playlists</strong></h4>
+
+    <div class="card-body raleway">
+
+        <h4 *ngIf="!there && !loading">No playlists.</h4>
+
+        <ul>
+
+            <div class="card lists" *ngFor="let list of channel.playlists">
+                <div class="view container hm-zoom">
+                    <a routerLink="/playlist" [queryParams]="{ list: list?.id }">
+                      <img src="{{ list.thumbnail }}" class="img-fluid image" style="width:100%; height:100%" alt="Playlist Thumbnail">
+                    </a>
+
+                    <a routerLink="/playlist" [queryParams]="{ list: list?.id }">
+                        <div class="overlay">
+                            <div class="text">
+                                <i class="fa fa-eye"></i> View All
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mask">
+                        <div class="left">
+                            &nbsp;
+                        </div>
+                        <div class="right">
+                            <span>{{ list.itemCount }}</span><br/>
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="title">
+                        <a routerLink="/playlist" [queryParams]="{ list: list?.id }">
+                            <h6>{{ list.title }}</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </ul>
+
+        <p>
+            <loading *ngIf="loading"></loading>
+        </p>
+
+    </div>
+
+</div>

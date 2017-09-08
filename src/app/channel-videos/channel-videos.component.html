@@ -1,0 +1,37 @@
+<div class="card" id="container">
+
+  <loading *ngIf="loading"></loading>
+
+  <div class="card-body raleway">
+    <h4 *ngIf="!loading"><strong>Top Rated Videos</strong></h4>
+
+    <p *ngIf="!uploaded && !loading">No Video Uploads</p>
+
+    <ul *ngIf="uploaded && !loading">
+
+      <div class="card uploaded" *ngFor="let upload of channel.uploads">
+        <div class="thumbnail hm-zoom user">
+          <a routerLink="/watch" [queryParams]="{ v: upload?.id }">
+              <img src="{{ upload?.thumbnail_url }}" class="img-fluid z-depth-2" alt="">
+            </a>
+        </div>
+        <div class="card-body">
+          <div class="title">
+            <a routerLink="/watch" [queryParams]="{ v: upload?.id }">
+              <h6>{{ upload?.title | summary:50 }}</h6>
+            </a>
+          </div>
+          <div class="stats">
+            <span>{{ upload?.views | converter }}&nbsp;</span>views |
+            <span class="subscribers">{{ upload?.publishedAt | dateConverter }}</span>
+            <br/>
+            <span>Duration : {{ upload?.duration | duration }}</span>
+          </div>
+        </div>
+      </div>
+
+    </ul>
+
+  </div>
+
+</div>

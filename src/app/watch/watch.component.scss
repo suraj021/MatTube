@@ -1,0 +1,64 @@
+.main > div{
+    //border: 1px solid black;
+}
+
+.flex-grid {
+    display: flex;
+    width: 100%;
+    padding-top: 1em;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+}
+
+.main {
+    //border: 1px solid blue;
+    flex: 2;
+}
+
+.recommended{
+    flex: 1;
+}
+
+
+.main .title{
+    margin-top: 2%;
+    border: 5px;
+}
+
+.main .description {
+    margin-top: 2%;
+    //border: 1px solid black;
+}
+
+.main .comments {
+    margin-top: 2%;
+    margin-bottom: 10px;
+}
+
+@media only screen and ( max-width: 768px ){
+    
+    .flex-grid{
+        display: grid;
+        grid-template-columns: 100%;
+        align-content: center;
+        //border: 1px solid red;
+    }
+
+    .recommended{
+        margin-top: 25px;
+        margin-left: -3.5%;
+    }
+
+
+    .embed, .recommended, .description, .comments{
+        //border: 1px solid black;
+        align-self: center;
+    }
+}
+
+@media only screen and ( max-width: 426px ){
+    
+    .flex-grid{
+        margin-top: -0.75em;
+    }
+}

@@ -1,0 +1,25 @@
+<div class="card z-depth-2" id="comments">
+  <div class="card-body">
+      <button  *ngIf="!show" (click)="showDesc()" type="button" class="btn btn-default btn-block raleway">
+          <i class="fa fa-eye" aria-hidden="true"></i>   Show Description
+      </button>
+      <button *ngIf="show" (click)="hideDesc()" type="button" class="btn btn-default btn-block raleway">
+          <i class="fa fa-eye-slash" aria-hidden="true"></i>   Hide Description
+      </button>
+      
+      <div *ngIf="loading" id="loading">
+        <loading></loading>
+      </div>
+
+      <div *ngIf="show" class="animate-bottom raleway description" >
+        <span><strong>Published on: &nbsp;</strong>{{ video?.publishedAt | date }}</span>
+        <hr/>
+        {{ video?.description }}
+        <br/>
+        <br/>
+        <span style="display:block;"><strong>Category</strong><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{ video?.category }}</span></span>
+        <p><strong>License</strong><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Standard YouTube License</span></p>
+      </div>
+  </div>
+</div>
+

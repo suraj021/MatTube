@@ -1,0 +1,19 @@
+.cover-wrapper {
+    //border: 1px solid black;
+}
+
+.user {
+    border-radius: 50%;
+    //border: 1px solid silver;
+    width: 15%;
+    margin: auto;
+    margin-top: -7%;
+    z-index: 5;
+}
+
+@media all and ( max-width: 426px ){
+    .user{
+        width: 17%;
+    }
+}
+

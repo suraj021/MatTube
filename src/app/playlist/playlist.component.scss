@@ -1,0 +1,236 @@
+#container{
+  width: 100%;
+}
+
+#left {
+  position: fixed;
+  max-height: 88vh;
+  min-height: 88vh;
+  //border: 1px solid black;
+  float: left;
+  width: 40%;
+  overflow-y: auto;
+  background-color: rgba(246, 235, 235, 0.95); 
+}
+
+#right {
+  //border: 1px solid black;
+  float: right;
+  width: 60%;
+  padding: auto;
+  margin: 0;
+  padding: 0;
+}
+
+ul li{
+  display: flex;
+  margin-bottom: 25px;
+  //padding-left: -5%;
+}
+
+ul li .index {
+  //border: 1px solid black;
+  flex-basis: 5%;
+  margin-left: -4.5%;
+  margin-top: 7%;
+  margin-right: 2%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul .video {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.card .thumbnail {
+  //border: 1px solid black;
+  height: 100%;
+}
+
+.card-body .title a h5{
+  margin-top: -2%;
+  font-family: raleway;
+  color: #ff0000;
+  font-size: 17px;
+}
+
+/////////////////  css for left
+
+.lists {
+  width: 70%;
+  margin: auto;
+  margin-top: 4%;
+  margin-bottom: 7%;
+}
+
+.card .container a img{
+    //border-radius: 10px;
+}
+
+.mask {
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+.mask > div {
+  //order: 1px solid black;
+}
+
+.mask .bottom{
+  //border-bottom-left-radius: 10px;
+  //border-bottom-right-radius: 10px;
+  background: #0F1112 ;
+  opacity: 0.7;
+  text-align: center;
+  padding-top: 2%;
+  color: #fff;
+  font-weight: bold;
+}
+
+#left .playlist-data {
+  width: 70%;
+  margin: auto;
+}
+
+#left .playlist-data h4{
+  margin-bottom: 4%;
+  color: #ff0000;
+}
+
+.playlist-data .channel span{
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.playlist-data .channel span {
+  margin-left: 3%;
+}
+
+.btn{
+  position: relative;
+  right: -5%;
+  background-color: #FF0000;
+  text-align: center;
+  padding: 10px;
+  margin-top: 14px;
+}
+
+.btn:hover {
+  cursor: none;
+}
+
+.btn:focus, .btn:active, .btn.active{
+  color: #fff;
+  background-color: #FF0000 !important;
+  border-color: #FF0000 !important; /*set the color you want here*/
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+}
+
+@media screen and ( max-width: 768px ){
+
+  #left {
+    width: 50%;
+  }
+
+  #right{
+    width: 50%;
+  }
+
+  ul li .video{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and ( max-width: 550px ){
+  
+  #container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #left{
+    position: relative;
+    width: 100%;
+    max-height: none;
+    margin: auto;
+    overflow: hidden;
+    background-color: rgba(246, 235, 235, 0.95); 
+  }
+
+  #right {
+    width: 100%;
+    //border: 1px solid black;
+  }
+
+  ul li{
+    width: 70%;
+    margin:auto;
+    margin-bottom: 15px;
+  }
+
+  ul li .video{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-footer {
+    width: 100%;
+  }
+}
+
+@media screen and ( max-width: 426px ){
+
+  #left{
+    min-height: none;
+  }
+
+  #right .card-body{
+    padding-bottom: -25px;
+  }
+  
+  ul li .index{
+    font-size: 14px;
+    //border: 1px solid black;
+    margin-left: -4.5%;
+    margin-top: 50%;
+    margin-bottom: 48%;
+    margin-right: 2%;
+  }
+
+  ul li{
+    width: 80%;
+    margin:auto;
+    margin-bottom: 20px;
+  }
+
+  h4{
+    font-size: 16px;
+  }
+
+  .playlist-data span{
+    font-size: 14px;
+  }
+
+  span.title{
+    font-size: 13px;
+  }
+
+  .btn{
+    font-size: 13px;
+  }
+
+  .card-body .title a h5{
+    font-size: 13px;
+  }
+
+  .card-body .title a h6{
+    font-size: 13px;
+  }
+
+  app-footer{
+    font-size: 12px;
+  }
+  
+}

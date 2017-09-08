@@ -1,0 +1,35 @@
+.wrapper{
+    background-color: #FF0000;
+}
+
+.bg-container{
+    width: 100%;
+    margin: 0px auto;
+    background-image: url( "../assets/images/bg.png" );
+    background-color: #FF0000;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    height: 88vh;
+    position: relative;
+    //display: flex;
+}
+
+.spacer {
+    //border: 1px solid black;
+    position: fixed;
+    width: 390px;
+    height: 275px;
+    //border: 1px solid black;
+    left: 35%;
+    top: 28%;
+}
+
+.popular{
+    padding-top: 10px;
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}

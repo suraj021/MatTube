@@ -1,0 +1,91 @@
+<app-not-found *ngIf="error" [message]="message"></app-not-found>
+<app-not-found *ngIf="error2" [message]="message2"></app-not-found>
+
+<div id="container" *ngIf="!error">
+
+  <div class="" id="left">
+
+    <loading *ngIf="loadLeft"></loading>
+
+    <div class="card lists" *ngIf="!loadLeft">
+      <div class="view container hm-zoom">
+        <img src="{{ playlist?.thumbnail }}" class="img-fluid image" style="width:100%; height:100%" alt="">
+        <a routerLink="/playlist" [queryParams]="{ list: playlist?.id }">
+          <div class="mask">
+            <div class="top">
+              &nbsp;
+            </div>
+            <div class="bottom">
+              <i class="fa fa-list" aria-hidden="true"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="playlist-data raleway" *ngIf="!loadLeft">
+      <h4>{{ playlist.title }}</h4>
+      <span>{{ playlist?.itemCount }} videos</span>
+      <strong>|</strong>
+      <span>{{ playlist?.publishedAt | dateConverter }}</span>
+
+      <hr>
+
+      <div class="channel raleway">
+        <a [routerLink]="[ '/channel', playlist?.channelId  ]">
+          <img src="{{ playlist?.channelThumbnail }}" class="img-fluid image " style="width:17%; border-radius:50%" alt="">
+        </a>
+        <a [routerLink]="[ '/channel', playlist?.channelId  ]">
+        <span class="title">{{ playlist?.channelTitle }}</span>
+        </a>
+        <button class="btn">Subscribe &nbsp; {{ playlist?.channelSubscribers | converter  }}</button>
+
+        <hr>
+
+        <span>{{ playlist?.description }}</span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="" id="right">
+
+    <div class="card-body">
+
+      <ul style="list-style:none;">
+
+        <li *ngFor="let video of playlist.videos; let i= index;">
+          <div class="index">
+            {{ i+1 }}
+          </div>
+          <div class="card video">
+            <div class="thumbnail hm-zoom">
+              <a routerLink="/watch" [queryParams]="{ v: video?.id }">
+                <img src="{{ video?.thumbnail_url }}" class="img-fluid z-depth-2" alt="">
+              </a>
+            </div>
+            <div class="card-body">
+              <div class="title">
+                <a routerLink="/watch" [queryParams]="{ v: video?.id }">
+                  <h5>{{ video?.title }}</h5>
+                </a>
+                <a [routerLink]="['/channel', video?.channelId]">
+                  <h6>{{ video?.channelTitle }}</h6>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <loading *ngIf="loadlist"></loading>
+
+      </ul>
+
+    </div>
+
+    <app-footer *ngIf="!loadlist"></app-footer>
+  </div>
+</div>

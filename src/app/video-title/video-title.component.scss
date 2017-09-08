@@ -1,0 +1,200 @@
+.card {
+    text-align: left;
+    background-color: #f8f8f8;
+}
+
+.card-body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-row{
+    width: 100%;
+    display: flex;
+   // flex-basis: 98% 2%;
+}
+
+.my-row  div {
+    //border: 1px solid black;
+}
+
+.my-row .share-logo{
+    text-align: right;
+}
+
+.card-body h4{
+    margin-left: -15px;
+}
+
+.col-12 {
+    flex-basis: 90%;
+}
+
+.col-2 {
+    flex-basis: 10%;
+    text-align: end;
+}
+
+.channel-title {
+    padding-top: 5px;
+    padding-left: -3px;
+}
+
+.btn-secondary{
+    margin-bottom: 15px;
+    background-color: #FF0000;
+    margin-top: -10px;
+    margin-left: 0;
+    text-align: center;
+    padding-left: -15px;
+}
+
+.btn-secondary:hover,.btn-secondary.disabled, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open>.dropdown-toggle.btn-secondary {
+    color: #fff;
+    background-color: #FF0000 !important;
+    border-color: #FF0000 !important; /*set the color you want here*/
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+}
+
+.subscribe {
+    //border: 1px solid black;
+    flex-basis: 70%;
+}
+
+.stats {
+    //border: 1px solid black;
+    flex-basis: 30%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.views{
+    justify-content: flex-start;
+    text-align: right;
+    margin-bottom: -10px;
+    padding-left: 10px;
+}
+
+.br{
+    margin-bottom: -10px;
+}
+
+.count {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.raleway{
+    padding-left: 7px;
+}
+
+.dislike {
+    padding-left: 10px;
+}
+
+.stats i {
+    //border: 1px solid blue;
+}
+
+.row {
+    width: 99.5%;
+    margin: 10px 10px 10px 4px;
+    opacity: 1;
+    transition:opacity 0.5s linear;
+}
+
+ul.social{
+    display: flex;
+    justify-content: space-around;
+}
+
+.social li{
+    display: inline;
+    padding-top: 4%;
+   // border: 1px solid red;
+}
+
+.social i{
+    color: #FFF;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.social i:hover{
+    color: #FF0000;
+}
+
+
+@media all and ( max-width: 900px ){
+
+    .stats {
+        display: none;
+    }
+}
+
+@media all and ( max-width: 425px ){
+    
+    .my-row{
+        width: 95%;
+       // flex-basis: 98% 2%;
+    }
+
+    .stats {
+            display: none;
+    }
+
+    ul.social{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .social li{
+        display: inline;
+        padding-top: 5%;
+       // border: 1px solid red;
+    }
+
+    .social i{
+        font-size: 2em;
+    }
+
+    h4.card-title{
+        font-size: 18px;
+    }
+
+    h5.channel-title{
+        font-size: 13px;
+    }
+
+    img{
+        width: 75%;
+        height: 75%;
+        float: right;
+    }
+
+    .btn{
+        font-size: 13px;
+    }
+}
+
+@media all and ( max-width: 768px ){
+
+    h4.card-title{
+        font-size: 16px;
+    }
+
+    h5.channel-title{
+        font-size: 13px;
+    }
+
+    img{
+        width: 75%;
+        height: 75%;
+        float: right;
+    }
+
+    .btn{
+        font-size: 13px;
+    }
+}

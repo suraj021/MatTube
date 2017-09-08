@@ -1,0 +1,163 @@
+.card {
+    width: 80%;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h3, h4{
+    color: #FF0000;
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.developer {
+    margin: auto;
+}
+
+#toss{
+    position: relative;
+    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    perspective: 1000;
+    margin-bottom: 25px;
+}
+
+#rev{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+}
+
+#rev > div {
+    //border: 1px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+#toss:hover #rev{
+    transform: rotateY(180deg);
+}
+ 
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+ 
+.face.back {
+    //display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    display: flex;
+}
+
+.btn{
+    background-color: #FF0000;
+    text-align: center;
+    margin: auto;
+}
+
+.btn:hover,.btn.disabled, .btn:focus, .btn:active, .btn.active{
+    color: #fff;
+    background-color: #FF0000 !important;
+    border-color: #FF0000 !important; /*set the color you want here*/
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+}
+
+.card .card-body {
+    margin-top: -25px;
+}
+
+.card.z-index-3 {
+    padding: 0;
+}
+
+.social {
+    background-color: #66D4FF;
+}
+
+.social .icons{
+    //border: 1px solid black;
+    font-size: 4em;
+    background-color: primary;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    margin-bottom: 25px;
+}
+
+i{
+    color: #fff;
+}
+
+.social i:hover{
+    color: #FF0000;
+}
+
+.developer p{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+@media all and ( max-width: 426px ){
+    h3, h4 {
+        font-size: 18px;
+    }
+
+    p, li {
+        font-size: 13px;
+    }
+
+    .social{
+        width: 80%;
+        margin: auto;
+    }
+
+    .social .icons{
+        font-size: 24px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center !important;
+    }
+
+    #toss {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 15px;
+        //border: 1px solid black;
+    }
+
+    .back{
+        //border: 1px solid red;
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .btn{
+        position: absolute;
+        bottom: 42%;
+        right: 20%;
+        font-size: 13px;
+    }
+
+    .card{
+        margin-bottom: 15px;
+        width: 90%;
+    }
+    
+}

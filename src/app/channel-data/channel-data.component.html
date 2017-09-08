@@ -1,0 +1,31 @@
+<div class="view z-depth-1 animate-bottom" id="menu">
+  <ul class="nav nav-pills raleway">
+    <a (click)="viewMode='videos'">
+      <li [class.active]="viewMode=='videos'">Videos</li>
+    </a>
+    <a (click)="viewMode='playlists'">
+      <li [class.active]="viewMode=='playlists'">Playlists</li>
+    </a>
+    <a (click)="viewMode='channels'">
+      <li [class.active]="viewMode=='channels'">Channels</li>
+    </a>
+    <a (click)="viewMode='about'">
+      <li [class.active]="viewMode=='about'">About</li>
+    </a>
+  </ul>
+</div>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'videos'">
+    <channel-videos></channel-videos>
+  </div>
+  <div *ngSwitchCase="'playlists'">
+    <channel-playlists></channel-playlists>
+  </div>
+  <div *ngSwitchCase="'channels'">
+    <channel-featured></channel-featured>
+  </div>
+  <div *ngSwitchCase="'about'">
+    <channel-about></channel-about>
+  </div>
+</div>

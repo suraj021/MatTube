@@ -1,0 +1,29 @@
+<div class="recommended">
+  <span id="recommended-videos" style="margin-left:7%;">Recommended Videos</span>
+
+  <ul class="list-unstyled">
+    <li class="media z-depth-1 animate-bottom" *ngFor="let video of videos">
+      <div>
+        <div class="view hm-zoom thumbnail">
+          <img src="{{ video?.thumbnail_url }}" class="img-fluid " alt="Video Thumnail">
+          <a [routerLink]="['/watch']" [queryParams]="{v: video?.id }">
+            <div class="mask">
+              <p class="white-text raleway">{{ video?.duration | duration }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="media-body">
+        <a [routerLink]="['/watch']" [queryParams]="{v: video.id }" class="link">
+          <h5 class="mt-0 mb-1 title raleway">{{ video.title | summary:51 }}</h5>
+        </a>
+        <a [routerLink]="[ '/channel', video.channelId ]" class="link">
+          <h6 class="channel-title">{{ video.channelTitle }}</h6>
+        </a>
+        <span class="raleway views">{{ video.views | number }}</span><span class="raleway">views</span>
+        <span><strong>|</strong></span>
+        <span class="raleway duration text-right" style="font-weight: bolder"> {{ video?.publishedAt | dateConverter }}</span>
+      </div>
+    </li>
+  </ul>
+</div>

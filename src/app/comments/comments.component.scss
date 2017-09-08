@@ -1,0 +1,112 @@
+.card {
+    background-color: white;
+}
+
+div.media-body {
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.btn{
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #FF0000;
+    margin-top: -10px;
+    margin-left: 0;
+    text-align: center;
+    padding-left: -15px;
+}
+
+.btn:hover,.btn.disabled, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn {
+    color: #fff;
+    background-color: #FF0000 !important;
+    border-color: #FF0000 !important; /*set the color you want here*/
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+}
+
+.btn i{
+    margin-right: 5px;
+}
+
+.media {
+    background-color: #f4f4f4;
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+img.user-thumbnail {
+    border: 2px solid silver;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.body {
+    margin-top: -4px;
+    display: block;
+}
+
+.likes i {
+    margin-left: -6px;
+}
+
+i.fa-heart {
+    color: #FF0000;
+}
+
+span.counter {
+    margin-left: 5px;
+    color: #000;
+}
+
+.author {
+    background-color: #FF0000;
+}
+
+.scroller{
+    margin-top: 25px;
+    padding: 0;
+}
+
+.scroller .raleway {
+    margin-left: 10px;
+}
+
+.loader {
+    padding-top: 10%;
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+a h5 {
+    display: inline;
+}
+
+@media all and ( max-width: 426px ){
+    buuton.btn{
+        font-size: 13px;
+    }
+
+    a h5 {
+        font-size: 14px;
+    }
+
+    .media-body{
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="cover-wrapper " >
+  <div class="view cover z-depth-3">
+      <img src="{{channel?.coverUrl}}" class="img-fluid" alt="">
+  </div>
+  <div class="view hm-zoom user">
+    <a [routerLink]="['/channel', _id ]">
+      <img src="{{channel?.thumbnailUrl}}" class="img-fluid z-depth-3" alt="">
+    </a>
+  </div>
+</div>

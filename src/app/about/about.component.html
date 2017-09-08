@@ -1,0 +1,59 @@
+<div class="card raleway">
+  <h3>About MatTube</h3>
+
+  <p>MatTube is a material design version of <a href="https://www.youtube.com/">YouTube</a>. It provides many of the YouTube's
+    functionality except for those which require user authentication. </p>
+
+  <div class="card-body">
+    <h4>Functionality added:</h4>
+    <ol>
+      <li><span class="highlight">21 Most Popular</span> Videos based on the country of the user.</li>
+      <li>Youtube's search with <span class="highlight">instant results</span>.</li>
+      <li>Embedded YouTube's player for <span class="highlight">watching videos</span> on the go.</li>
+      <li><span class="highlight">21 Recommended videos</span> for currently playing video.</li>
+      <li><span class="highlight">21 Related comments</span> for currently playing video.</li>
+      <li>Ability to view <span class="highlight">YouTube Channel's data</span> by Id, including Videos uploaded, Playlists created,
+        Featured channels and About page. </li>
+      <li>List <span class="highlight">all videos of a playlist</span> in a single page.</li>
+      <li>Also <span class="highlight">Youtube's error</span> page.</li>
+    </ol>
+
+    <h4>Technologies used:</h4>
+    <ol>
+      <li><a href="https://angular.io">Angular 4 (ES6)</a></li>
+      <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+      <li>Free version of <a href="https://mdbootstrap.com/">MdBootstrap</a></li>
+      <li>New <a href="https://developers.google.com/youtube/v3/">YouTube v3 API</a></li>
+      <li>This <a href="https://freegeoip.net/json/">API</a> for determining user's location.</li>
+    </ol>
+  </div>
+
+  <h3>Meet the Developer.</h3>
+  <div class="developer">
+    <div id="toss">
+      <div id="rev" class="card z-index-3">
+        <div class="face">
+          <img width="300" height="300" src="../assets/images/profile.jpg" />
+        </div>
+        <div class="face back">
+          <button class="btn" (click)="toggle()">Hire Me</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="social" *ngIf="show">
+      <div class="icons">
+        <a href="https://www.facebook.com/suraj.bora.021"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://github.com/suraj021"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="location.href='mailto:surajbora021@gmail.com'"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <p>I am Suraj Singh Bora, to be graduated (most probably / maybe) from <strong><a href="http://www.iitbhu.ac.in">IIT (BHU), Varanasi</a></strong>.
+      I am a motivated <strong>Web Designer</strong>, <strong>Algorithmist</strong> and a <strong>Machine Learning enthusiast</strong>.</p>
+    
+  </div>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,51 @@
+<div class="card lighten-1 text-left z-depth-2">
+
+  <div class="card-body">
+
+    <div class="my-row">
+      <div class="col-12">
+        <h4 class="card-title raleway" style="flex:1"><strong>{{ _video?.title }}</strong></h4>
+      </div>
+      <div class="col-2 share-logo">
+        <i class="fa fa-share-alt" (click)="share= !share;" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="subscribe">
+      <div class="media">
+        <a [routerLink]="[ '/channel', _video?.channelId ]">
+          <img class="d-flex mr-3 edit" src="{{ _video?.channelThumbnailUrl }}" alt="" style="border: 1px solid silver;">
+        </a>
+        <div class="media-body">
+          <a [routerLink]="[ '/channel', _video?.channelId ]">
+            <h5 class="mt-0 raleway channel-title">{{ _video?.channelTitle }}</h5>
+          </a>
+          <button type="button" class="btn btn-secondary disabled">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats" style="color: #ff2626;">
+      <i class="fa fa-eye views" aria-hidden="true"><span class="raleway">{{ _video?.views | number }}</span><span class="raleway">views</span></i>
+      <div class="br">
+        <hr/>
+      </div>
+      <div class="count">
+        <i class="fa fa-thumbs-up like" aria-hidden="true"><span class="raleway">{{ _video?.likes | number }}</span></i>
+        <i class="fa fa-thumbs-down dislike" aria-hidden="true"><span class="raleway">{{ _video?.dislikes | number }}</span></i>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div *ngIf="share" class="row z-depth-2" style="background-color: #66D4FF">
+  <div class="col-12">
+    <ul class="social">
+      <li class="fb"><a href="{{ fbUrl }}"><i class="fa fa-facebook"></i></a></li>
+      <li class="gp"><a href="{{ goUrl }}"><i class="fa fa-google-plus"></i></a></li>
+      <li class="tw"><a href="{{ twUrl }}"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+  </div>
+</div>

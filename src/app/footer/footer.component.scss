@@ -1,0 +1,20 @@
+.footer {
+    background-color: #f4f4f4;
+    color: #FF0000;
+    border-top: 1px solid silver;
+}
+
+.col-12 {
+    display: flex;
+}
+
+p {
+    margin: auto;
+    padding: 1%;
+}
+
+@media all and ( max-width: 426px ){
+    p {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,58 @@
+.card {
+    height: 100%;
+    //border: 1px solid red;
+}
+
+.thumbnail{
+    //border: 10px soild blue !important;
+}
+
+.title {
+    //border: 1px solid black;
+    flex: 1;
+    font-size: 16px;
+    margin: 10px 10px 0px 10px;
+}
+
+.stats {
+    font-size: 14px;
+    color: #FF0000;
+    //border: 1px soild blue;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    margin: 0px 10px 10px 10px;
+}
+
+span i{
+    margin-left: -5px;
+}
+
+.mask{
+    //border: 1px solid black;
+}
+
+.view .mask p{
+    background-color:#000; 
+    display:inline;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 2px;
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+@media all and ( max-width: 426px ){
+    h4.card-title{
+        font-size: 14px;
+    }
+
+    .stats a span, .stats span{
+        font-size: 12.5px;
+    }
+}

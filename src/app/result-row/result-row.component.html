@@ -1,0 +1,41 @@
+<div class="card">
+
+    <!--Card image-->
+    <div>
+        <div class="view hm-zoom thumbnail">
+            <a [routerLink]="['/watch']" [queryParams]="{v: video?.id }">
+                <img src="{{ video?.thumbnail_url }}" class="img-fluid " alt="">
+            </a>
+            <a [routerLink]="['/watch']" [queryParams]="{v: video?.id }">
+                <div class="mask">
+                    <p class="white-text raleway">{{ video?.duration | duration }}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+        <!--Title-->
+        <a [routerLink]="['/watch']" [queryParams]="{v: video?.id }">
+            <h4 class="title raleway">{{ video.title| summary:50 }}</h4>
+        </a>
+        <a [routerLink]="[ '/channel', video?.channelId ]">
+            <span class="channel-title raleway">{{ video.channelTitle }}</span>
+        </a>
+        <!--Text-->
+        <p class="card-text raleway">{{ video.description | summary:201 }}</p>
+
+        <div class="details">
+            <div class="stats">
+                <i class="fa fa-thumbs-up like" aria-hidden="true"><span class="raleway">{{ video?.likes | number }}</span></i>
+                <i class="fa fa-thumbs-down dislike" aria-hidden="true"><span class="raleway">{{ video?.dislikes | number }}</span></i>
+            </div>
+            <div class="show">
+                <i class="fa fa-eye views" aria-hidden="true"><span class="raleway">{{ video?.views | number }}</span><span class="raleway">views</span></i>
+                <span class="raleway"><strong> | &nbsp;</strong>{{ video?.publishedAt | dateConverter }}</span>
+            </div>
+        </div>
+    </div>
+
+</div>

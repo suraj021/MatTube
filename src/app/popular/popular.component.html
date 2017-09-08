@@ -1,0 +1,13 @@
+<div class="popular-container" *ngIf="country">
+
+    <loading *ngIf="loading"></loading>
+
+    <span id="popular" *ngIf="!loading"><h1 class="raleway"><strong>Most Popular Videos in <span class="animated bounce">{{ country }}</span></strong></h1></span>
+
+    <div class="flex-container" *ngIf="popVideo.length > 0 && !loading">
+        <div *ngFor="let vid of popVideo" class="result">
+            <pop-video [video]="vid"></pop-video>
+        </div>
+    </div>
+
+</div>
